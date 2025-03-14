@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+body {
+    background-color: #000000;    
+    color: white;
+    text-align: center;
+    padding: 0 0 20px 0;
+    height: 100vh;
+}
+
+body .background-image{
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 50%;
+}
+
+/* ======= HEADER ======= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #ffcb05, #ff6f61);
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #00000050;
+    height: 80px;
+    
+}
+
+.header img {
+    height: 50px;
+}
+
+/* ======= BARRA DE PESQUISA ======= */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 8px;
+    border-radius: 20px;
+    height: 40px;
+}
+
+#searchInput {
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    width: 400px;
+    outline: none;
+    background: transparent;
+}
+
+.search-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#clearButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+/* ======= CONTAINER DOS POKÉMONS ======= */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ======= CARDS DOS POKÉMONS ======= */
+.card {
+    background: #fffefc;
+    border-radius: 12px;
+    padding: 15px;
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 5px solid #bfbfbf;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+}
+
+.card p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ======= PAGINAÇÃO ======= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+}
+
+.pagination button {
+    background-color: #ffcb05;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #c09d01;
+}
+
+#pageNumber {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
